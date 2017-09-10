@@ -7,7 +7,7 @@ import random
 pages = set()
 random.seed(datetime.datetime.now())
 
-def getinternalLinks(bsObj, includeUrl):
+def getInternalLinks(bsObj, includeUrl):
     includeUrl = urlparse(includeUrl).scheme+"://"+urlparse(includeUrl).netlock
     internalLinks = []
 
@@ -34,7 +34,7 @@ def getRandomExternalLink(startingPage):
     externalLinks = getExternalLinks(bsObj, urlparse(startingPage).netloc)
     if len(externalLinks) == 0:
         domain = urlparse(startingPage).scheme + "://"+urlparse(startingPage).netloc
-        internalLinks = getinternalLinks(bsObj, domain)
+        internalLinks = getInternalLinks(bsObj, domain)
         return getRandomExternalLink(internalLinks[random.randint(0,len(internalLinks)-1)])
     else:
         return externalLinks[random.randint(0, len(externalLinks)-1)]
