@@ -9,7 +9,7 @@ driver.get('https://www.naver.com/')
 driver.find_element_by_name('id').send_keys('oceanfog')
 driver.find_element_by_name('pw').send_keys('') # 사용할 패스워드
 
-driver.find_element_by_name('pw').submit()
+driver.find_element_by_css_selector('.login .btn_login input').submit()
 
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
