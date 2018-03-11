@@ -13,6 +13,7 @@ driver.find_element_by_css_selector('.login .btn_login input').submit()
 
 driver.implicitly_wait(5)
 driver.get("https://nid.naver.com/user2/api/route.nhn?m=routePcMyInfo")
+driver.implicitly_wait(5)
 
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
