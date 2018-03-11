@@ -6,8 +6,8 @@ import time
 from urllib.request import urlopen, Request
 
 
-ACCESS_TOKEN = '02b654aa-7034-4eb2-bbdf-f08c9c11248d'
-SECRET_KEY = '5259ffc4-007f-4407-815e-e489943606a0'
+ACCESS_TOKEN = ''
+SECRET_KEY = ''
 UPPERCASE_SECRET_KEY = SECRET_KEY.upper()
 HOST = 'https://api.coinone.co.kr/'
 
