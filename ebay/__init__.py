@@ -1,7 +1,7 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
-driver = webdriver.Chrome('/Users/kyeongrok/Documents/chromedriver')
+driver = webdriver.Chrome('../chromedriver')
 driver.implicitly_wait(3)
 
 driver.get('https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=')
