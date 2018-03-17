@@ -15,21 +15,24 @@ mu_active_tbl_id = content.find("div", {"id":"mu_active_tbl_id"})
 tbodys = mu_active_tbl_id.findAll("tbody")
 
 for item in tbodys:
-    try:
-        buyerEmail = item.find("td", {"id":"BuyerEmail"})
-        purchasedQty = item.find("td", {"id": "PurchasedQty"})
-        qty = purchasedQty.find("div").text
 
-        aTag = buyerEmail.find("a")
+    if( len(item.attrs) != 0):
+        print(item.attrs['class'])
         try:
-            productName = aTag['title']
-            print(productName)
-        except KeyError:
-            print(qty)
-            pass
+            buyerEmail = item.find("td", {"id":"BuyerEmail"})
+            purchasedQty = item.find("td", {"id": "PurchasedQty"})
+            qty = purchasedQty.find("div").text
 
-    except AttributeError:
-        pass
+            aTag = buyerEmail.find("a")
+            try:
+                productName = aTag['title']
+                print(productName)
+            except KeyError:
+                print(qty)
+                pass
+
+        except AttributeError:
+            pass
 
 
 
