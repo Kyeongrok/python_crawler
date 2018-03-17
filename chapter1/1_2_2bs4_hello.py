@@ -10,5 +10,5 @@ an_items = an_l.findAll("li")
 # print(an_items)
 
 for item in an_items:
-    an_txt = item.find("span", {"class":"an_txt"})
-    print(an_txt.text)
+    an_txt = item.find("a")
+    print(an_txt)
