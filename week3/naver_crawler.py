@@ -9,8 +9,15 @@ html = urlopen(url_beauty)
 bsObj = BeautifulSoup(html)
 
 atags = bsObj.findAll("a")
-print(atags)
+# print(atags)
+
+#[<a>~~~</a>,<a>~~~</a> --- <a>~~</a>]
+#list = []
 
 # element 요소
 # elements 요소들
 
+print(len(atags))
+for element in atags[0:10]:
+    # print(element.text)
+    print(element["href"])
