@@ -88,4 +88,14 @@ html tag
     * json tree
     * http://jsonviewer.stack.hu/
     
-    
+## 실습
+    1. http request하기
+    2. url 알아내서 a tag출력하기
+    3. 아래 data json으로 바꾸기
+    ```
+        이름	가격	위치
+        cozy 모임공간	2500	강남역 3번출구
+        스터디 플래닛	3000	역삼역과 강남역 근처
+        에이지 스토리	2000	서울대입구역
+        스타벅스	5000	많음
+    ```
