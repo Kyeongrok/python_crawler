@@ -10,7 +10,16 @@ bsObj = BeautifulSoup(html, "html.parser")
 
 # json string을 json object로
 jsonObject = json.loads(str(bsObj))
-print(jsonObject[0:10])
 
+
+zero_to_nine = jsonObject[0:10]
+
+print(zero_to_nine)
+
+# 실습3 zero_to_nine출력 해보기
+
+for element in zero_to_nine:
+    row = "{},{},{},{}".format(element['id'],element['date'],element['settlement'],element['volume'])
+    print(row)
 
 
