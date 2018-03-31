@@ -7,13 +7,7 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-url_beauty = "http://m.pann.nate.com/talk/c20012"
+url_beauty = "http://www.365qt.com/TodaysQT.asp?QTID=6749&WD=1"
 html = urlopen(url_beauty)
-bsObj = BeautifulSoup(html)
 
-atags = bsObj.find("ul", {"class":"list rank-list"}).findAll("a")
-
-print(len(atags))
-
-for atag in atags:
-    print(atags)
+print(html)
