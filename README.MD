@@ -56,4 +56,36 @@ html tag
     * html또는 json형태의 데이터를 트리 구조로 접근 할 수 있게 해주는 라이브러리
     * 파싱을 할 때 사용 합니다. 
  
- 
+## JSON
+    * hyper text markup language(HTML)
+    * 하이퍼텍스트 마크업 랭기지
+    * javascript object notation(JSON)
+    * 자바스크립트 오브젝트 표현법
+    * tree구조
+    * key, value
+
+```
+    {}한개, []여러개
+    atag, atags
+    {list:[
+            {name:"kyeongrok", age:"32"},
+            {name:"bomi", age:"25"},
+            {name:"cl", age:"27"}
+        ]
+    }
+    
+    {list:[]}
+    
+    [
+        {"href":"www.naver.com", name:"naver"},
+        {"href":"www.google.com", name:"google"},
+        {},
+        {}
+    ]
+```
+
+## json 편하게 보는 site
+    * json tree
+    * http://jsonviewer.stack.hu/
+    
+    
