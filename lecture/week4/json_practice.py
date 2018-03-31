@@ -7,5 +7,6 @@ json_object = json.loads(json_string)
 print(json_object)
 
 # 하나씩 꺼내서 출력 해보세요 for문
-for item in range(0, 10):
-    print(item)
+for item in json_object:
+    result = "{},{},{}".format(item['이름'],item['가격'],item['위치'])
+    print(result)
