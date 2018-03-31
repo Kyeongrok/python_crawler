@@ -42,3 +42,18 @@ html tag
 ```html
 <html>, <div>, <ul>, <li>, <a>, <span> 등이 있다.
 ```
+
+## url알아내는 법
+    * 크롬 개발자 도구를 사용 한다.
+    * 메뉴 - 도구 더보기 - 개발자 도구
+    * Network 탭으로 이동한다.
+    * XHR선택한다.
+    * 새로고침 또는 page이동을 한다.
+    * Headers탭을 누른다.
+    * Request URL을 확인 한다.
+
+## Beautiful Soup이란?
+    * html또는 json형태의 데이터를 트리 구조로 접근 할 수 있게 해주는 라이브러리
+    * 파싱을 할 때 사용 합니다. 
+ 
+ 

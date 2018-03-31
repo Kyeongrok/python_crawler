@@ -2,8 +2,8 @@
 # console에 출력 해보세요
 from urllib.request import urlopen
 
-url_beauty = "https://www.naver.com/nvthemecast_body?theme=BEAUTY"
-html = urlopen(url_beauty)
+url_design = "https://www.naver.com/nvthemecast_body?theme=DESIGN"
+html = urlopen(url_design)
 # 크롤링
 print(html.read())
 
