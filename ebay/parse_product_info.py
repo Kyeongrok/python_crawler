@@ -8,13 +8,18 @@ def getFileString(file_path):
         line = f.read()
         return line
 
-file_string = getFileString(fileName)
-bsObj = BeautifulSoup(file_string, "html.parser")
+def get_order_info(page_string):
+    bsObj = BeautifulSoup(page_string, "html.parser")
 
-tbody = bsObj.find("tr", {"class":"shreskin-edit-sales-record-buyer-details"}).find("table").find("tbody").find("table").find("tbody")
+    tbody = bsObj.find("tr", {"class":"shreskin-edit-sales-record-buyer-details"}).find("table").find("tbody").find("table").find("tbody")
 
-trs = tbody.findAll("tr")
+    trs = tbody.findAll("tr")
 
-print(trs[0].findAll("td")[1].find("b").text)
+    id = trs[0].findAll("td")[1].find("b").text
+    email = trs[1].findAll("td")[1].find("b").text
+
+    result = "{},{}".format(id, email)
+    return result
+
 
 
