@@ -10,4 +10,11 @@ def getFileString(file_path):
 
 file_string = getFileString(fileName)
 bsObj = BeautifulSoup(file_string, "html.parser")
-print(bsObj)
+
+tbody = bsObj.find("tr", {"class":"shreskin-edit-sales-record-buyer-details"}).find("table").find("tbody").find("table").find("tbody")
+
+trs = tbody.findAll("tr")
+
+print(trs[0].findAll("td")[1].find("b").text)
+
+
