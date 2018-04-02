@@ -12,10 +12,10 @@ def printLineByLine(file_path):
 
 result = printLineByLine(fileName)
 print(result)
-# soup = BeautifulSoup(result, 'html.parser')
-# summary_bar_columns = soup.find("div",{"class":"summary-bar"}).findAll("div", {"class":"summary-bar-column"})
-#
-# print(summary_bar_columns)
-#
-# for item in summary_bar_columns:
-#     print(item)
+soup = BeautifulSoup(result, 'html.parser')
+summary_bar_columns = soup.find("div",{"class":"summary-bar"}).findAll("div", {"class":"summary-bar-column"})
+
+print(summary_bar_columns)
+
+for item in summary_bar_columns:
+    print(item)
