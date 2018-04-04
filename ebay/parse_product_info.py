@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 
 
 
-fileName = "./eachPage1.html"
+fileName = "./phone_case_others.html"
 def getFileString(file_path):
     with open(file_path, 'rt', encoding='utf-8') as f:
         line = f.read()
@@ -22,11 +22,33 @@ def get_order_info(page_string):
     state = trs[7].findAll("td")[1].find("input")['value']
     zip = trs[8].findAll("td")[1].find("input")['value']
     country = trs[9].find("select").find("option", selected=True).text
+    phone_number = ""
+    if country in ['Canada', 'United States']:
+        phone_number_td = trs[10].findAll("td")[1]
+        p1 = phone_number_td.find("input", {"name":"dayphone1"})['value']
+        p2 = phone_number_td.find("input", {"name":"dayphone2"})['value']
+        p3 = phone_number_td.find("input", {"name":"dayphone3"})['value']
+        phone_number = "({}){}-{}".format(p1, p2, p3)
+    elif country in ['United Kingdom']:
+        phone_number_td = trs[10].findAll("td")[1]
+        p1 = phone_number_td.find("input", {"name": "dayphone1"})['value']
+        p2 = phone_number_td.find("input", {"name": "dayphone2"})['value']
+        phone_number = "({}){}".format(p1, p2)
+    else:
+        phone_number_td = trs[10].findAll("td")[1]
+        p1 = phone_number_td.find("input", {"name": "dayphone1"})['value']
+        phone_number = p1
 
-    result = "{},{},{},{},{},{},{},{},{}"\
+
+    # print(phone_number)
+
+    result = "{},{},{},{},{},{},{},{},{},{}"\
         .format(id, email, buyer_full_name, street1
-                , street2, city, state, zip, country)
+                , street2, city, state, zip, country,
+                phone_number)
     return result
+
+
 
 # result = get_order_info(getFileString(fileName))
 # print(result)
