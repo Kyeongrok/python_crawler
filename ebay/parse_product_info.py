@@ -20,14 +20,13 @@ def get_order_info(page_string):
     street2 = trs[5].findAll("td")[1].find("input")['value']
     city = trs[6].findAll("td")[1].find("input")['value']
     state = trs[7].findAll("td")[1].find("input")['value']
+    zip = trs[8].findAll("td")[1].find("input")['value']
+    country = trs[9].find("select").find("option", selected=True).text
 
-    # print(state)
-
-    result = "{},{},{},{},{},{},{}"\
+    result = "{},{},{},{},{},{},{},{},{}"\
         .format(id, email, buyer_full_name, street1
-                , street2, city, state)
+                , street2, city, state, zip, country)
     return result
 
 # result = get_order_info(getFileString(fileName))
 # print(result)
-
