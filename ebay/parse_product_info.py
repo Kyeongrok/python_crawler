@@ -19,7 +19,6 @@ def get_order_info(page_string):
     street1 = trs[4].findAll("td")[1].find("input")['value']
     street2 = trs[5].findAll("td")[1].find("input")['value']
     city = trs[6].findAll("td")[1].find("input")['value']
-    print(buyer_full_name)
 
     result = "{},{},{},{},{},{}"\
         .format(id, email, buyer_full_name, street1, street2, city)
