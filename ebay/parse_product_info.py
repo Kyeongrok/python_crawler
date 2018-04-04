@@ -25,6 +25,6 @@ def get_order_info(page_string):
         .format(id, email, buyer_full_name, street1, street2, city)
     return result
 
-result = get_order_info(getFileString(fileName))
-print(result)
+# result = get_order_info(getFileString(fileName))
+# print(result)
 

@@ -3,12 +3,19 @@ import ebay.allOrdersParser as aop
 import ebay.parse_product_info as ppinf
 
 
-urls = aop.getUrls()
+order_list_url = lambda page_num: "https://k2b-bulk.ebay.com/ws/eBayISAPI.dll?SalesRecordConsole&pageNumber={}".format(page_num)
 
-index = 1
-for url in urls[0:2]:
-    page_string = crawl.getPageString(url)
-    result = ppinf.get_order_info(page_string)
-    print(result)
-    index += 1
+
+
+print(order_list_url(1))
+print(order_list_url(2))
+
+# urls = aop.getUrls()
+#
+# index = 1
+# for url in urls[0:2]:
+#     page_string = crawl.getPageString(url)
+#     result = ppinf.get_order_info(page_string)
+#     print(result)
+#     index += 1
 

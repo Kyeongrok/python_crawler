@@ -43,10 +43,10 @@ def getUrls():
     return order_address
 
 
-urls = getUrls()
-
-for url in urls:
-    print(url)
+# urls = getUrls()
+#
+# for url in urls:
+#     print(url)
 
 
 
