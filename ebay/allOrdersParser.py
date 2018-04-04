@@ -9,15 +9,16 @@ def printLineByLine(file_path):
         return line
 
 
-result = printLineByLine(fileName)
+page_string1 = printLineByLine(fileName)
 # print(result)
-bsObj = BeautifulSoup(result, "html.parser")
-content = bsObj.find("table", {"id":"content"})
-mu_active_tbl_id = content.find("div", {"id":"mu_active_tbl_id"})
-tbodys = mu_active_tbl_id.findAll("tbody")
 
 
-def getUrls():
+
+def getUrls(page_string):
+    bsObj = BeautifulSoup(page_string, "html.parser")
+    content = bsObj.find("table", {"id": "content"})
+    mu_active_tbl_id = content.find("div", {"id": "mu_active_tbl_id"})
+    tbodys = mu_active_tbl_id.findAll("tbody")
 
     infos = []
     order_address = []
