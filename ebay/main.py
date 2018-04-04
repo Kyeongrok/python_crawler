@@ -1,7 +1,6 @@
 from selenium import webdriver
 import ebay.login_and_crawl as crawl
 import ebay.allOrdersParser as aop
-import ebay.parse_product_info as ppinf
 
 order_list_url_template = lambda page_num: "https://k2b-bulk.ebay.com/ws/eBayISAPI.dll?SalesRecordConsole&pageNumber={}".format(page_num)
 
