@@ -12,6 +12,13 @@
     * 크롤링한 데이터에서 값을 뽑아내는 것
     * 라이브러리:bs4 BeautifulSoup 뷰티풀솝
 
+## 용어들
+url : 인터넷 주소
+http : 인터넷 주소 앞에 붙는 것 protocol
+html : 인터넷에서 문서를 보여줄때 쓰는 표현식들
+server : 페이지를 서빙해주는 곳 (naver, google)
+
+
 css
 css selector
 	페이지 내에 데이터(한 단어)가 있는 곳의 주소

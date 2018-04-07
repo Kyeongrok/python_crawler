@@ -17,7 +17,7 @@ print(zero_to_nine)
 
 # 실습3 zero_to_nine출력 해보기
 for element in zero_to_nine:
-    print(element)
+    # print(element)
     row = "{},{},{},{}".format(element['id'],element['date'],element['settlement'],element['volume'])
     print(row)
 
