@@ -12,4 +12,5 @@
 * 라이브러리란? 라이브러리 설치하기
 * http, html, css
 
-    
+## Certificate 에러 날 때
+Python이 설치된 경로에 들어가 Install Certificates.command 한다
