@@ -29,6 +29,10 @@ naver의 메뉴를 크롤링 한다
     * 크롤링한 데이터에서 값을 뽑아내는 것
     * 라이브러리:bs4 BeautifulSoup 뷰티풀솝
 
+## urllib
+* 크롤링 하는 라이브러리
+* 모래를 퍼온다.
+
 ## BeautifulSoup
     * 파싱을 하는 라이브러리
     * 반도체공장(모래) = BeautifulSoup(html)
