@@ -17,3 +17,7 @@ print(num_list[1])
 
 # 모두 출력을 하고 싶다
 # 하나씩 뽑아서 출력 하려면?
+
+message = "hello"
+print(message)
+

@@ -1,6 +1,5 @@
 from selenium import webdriver
-from bs4 import BeautifulSoup
-import ebay.parse_product_info as ppinf
+import com.week5.parse_product_info as ppinf
 
 def getPageString2(driver, urls):
     driver.implicitly_wait(3)

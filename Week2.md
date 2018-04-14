@@ -92,6 +92,14 @@ naver의 메뉴를 크롤링 한다
     * ex) 식당 기다리는 순서
     * 학생 목록(출석부)
 
+## List에서 하나만 뽑기
+```python
+list = [1, 2, 3]
+extracted_item = list[0]
+print(list)
+```
+
+
 ## find 사용법
 * .find("<찾고싶은tag>")
 * ex) item.find("a")
