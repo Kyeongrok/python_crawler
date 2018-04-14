@@ -77,6 +77,29 @@ naver의 메뉴를 크롤링 한다
 * Headers탭을 누른다.
 * Request URL을 확인 한다.
  
+ ## []에 대해서
+ * [] = list
+ * []에는 값이 0개 한개 또는 여러개 들어갈 수 있습니다.
+ * 각 값들은 ,로 구분 합니다.
+ * ex) [1, 2, 3], [<li></li>,<li></li>]
+ * 이렇게 생긴걸 list라는 자료구조 라고 합니다.
+
+## tree, list 자료구조
+* tree는 나뭇가지 처럼 뻗어 나가는 것
+    * ex) 책의 장, 절
+    * 조직도
+* list는 순서대로 나열
+    * ex) 식당 기다리는 순서
+    * 학생 목록(출석부)
+
+## find 사용법
+* .find("<찾고싶은tag>")
+* ex) item.find("a")
+
+## .find(), findAll()
+* .find()는 한개인 것을 찾을 때 씁니다
+* .findAll()은 여러개인 것을 찾을 때 씁니다.
+ 
 ## JSON
     * javascript object notation(JSON)
     * 자바스크립트 오브젝트 표현법
