@@ -50,5 +50,5 @@ def get_order_info(page_string):
 
 
 
-# result = get_order_info(getFileString(fileName))
-# print(result)
+result = get_order_info(getFileString(fileName))
+print(result)
