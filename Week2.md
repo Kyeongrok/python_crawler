@@ -36,7 +36,18 @@ naver의 메뉴를 크롤링 한다
 ## BeautifulSoup
     * 파싱을 하는 라이브러리
     * 반도체공장(모래) = BeautifulSoup(html)
-    
+
+## 네이버 첫 페이지 불러오기
+```python
+from urllib.request import urlopen
+
+url = "https://www.naver.com/"
+html = urlopen(url)
+
+print(html.read())
+```
+
+
 ### CSS
 * Cascading Style Sheet
 * css selector
