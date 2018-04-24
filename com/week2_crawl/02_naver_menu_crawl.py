@@ -14,7 +14,8 @@ lis = ul_an_l.findAll("li")
 for li in lis:
     try:
         atag = li.find("a")
-        print(atag)
+        span = atag.find("span",{"class":"an_txt"})
+        print(span.text)
     except:
         print("", end="")
 
