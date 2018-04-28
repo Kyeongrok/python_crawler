@@ -23,16 +23,15 @@ Python이 설치된 경로에 들어가 Install Certificates.command 한다
 * 내장 라이브러리는 import해서 사용하고 외장 라이브러리는 설치한 후 import해서 사용합니다.
 
 ## 라이브러리 설치 하는 방법
-* Pettings(Preferance) -> interpreter검색
+* Settings(Preferance) -> interpreter검색
 * +를 누르고 설치하고 싶은 라이브러리 검색 ex)bs4, numpy 등
-
 
 ## 네이버 첫 페이지 받아오기
 ```python
-from urllib.request import urlopen
+import urllib.request
 
 url = "https://www.naver.com/"
-html = urlopen(url)
+html = urllib.request.urlopen(url)
 
 print(html.read())
 ```
