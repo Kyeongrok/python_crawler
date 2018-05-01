@@ -13,5 +13,5 @@ html_str = """
 """
 bsObj = bs4.BeautifulSoup(html_str, "html.parser")
 
-div = bsObj.find("ul")
-print(div)
+ul = bsObj.find("ul")
+print(ul)
