@@ -6,10 +6,12 @@ BeautifulSoup(뷰티풀솝)은 데이터를 추출하는데 필요한 기능이 
 ###  BeautifulSoup 사용법
 ```python
 import bs4
-str = "<html><div></div></html>"
-bsObj = bs4.BeautifulSoup(str, "html.parser")
+html_str = "<html><div></div></html>"
+bsObj = bs4.BeautifulSoup(html_str, "html.parser")
 
+print(type(bsObj))
 print(bsObj)
+print(bsObj.find("div"))
 ```
 
 ## 크롤링이란?
@@ -19,3 +21,22 @@ print(bsObj)
 ## 파싱이란?
 크롤링한 데이터에서 값을 뽑아내는 것
 * 라이브러리:bs4 BeautifulSoup 뷰티풀솝
+
+### 데이터 받아서 파싱하기
+네이버에서 맨 오른쪽 위에 있는 '네이버를 시작페이지로'이 글자를 파싱 하는 코드입니다.
+```python
+import urllib.request
+import bs4
+
+url = "https://www.naver.com/"
+html = urllib.request.urlopen(url)
+
+bsObj = bs4.BeautifulSoup(html, "html.parser")
+
+# print(html.read())
+# print(bsObj)
+
+top_right = bsObj.find("div", {"class":"area_links"})
+first_a = top_right.find("a")
+print(first_a.text)
+```
