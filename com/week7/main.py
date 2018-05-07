@@ -1,6 +1,6 @@
 from selenium import webdriver
-import com.week5.login_and_crawl as crawl
-import com.week5.allOrdersParser as aop
+import com.week7.login_and_crawl as crawl
+import com.week7.allOrdersParser as aop
 
 order_list_url_template = lambda page_num: "https://k2b-bulk.ebay.com/ws/eBayISAPI.dll?SalesRecordConsole&pageNumber={}".format(page_num)
 

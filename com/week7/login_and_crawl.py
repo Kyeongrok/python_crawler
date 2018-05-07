@@ -1,5 +1,5 @@
 from selenium import webdriver
-import com.week5.parse_product_info as ppinf
+import com.week7.parse_product_info as ppinf
 
 def getPageString2(driver, urls):
     driver.implicitly_wait(3)

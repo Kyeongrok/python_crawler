@@ -52,10 +52,6 @@ print(html.read())
 					<span>
 ```
 
-## html 태그
-```html
-<html>, <div>, <ul>, <li>, <a>, <span> 등이 있다.
-```
 
 ## url알아내는 법
 * 크롬 개발자 도구를 사용 한다.
