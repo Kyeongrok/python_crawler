@@ -84,41 +84,7 @@ for li in ul:
 </a>
 </li>
 
-
-<li class="an_item">
-<a class="an_a mn_cafe" data-clk="svc.cafe" href="http://section.cafe.naver.com/">
-<span class="an_icon"></span><span class="an_txt">카페</span>
-</a>
-</li>
-
-
-<li class="an_item">
-<a class="an_a mn_blog" data-clk="svc.blog" href="http://section.blog.naver.com/">
-<span class="an_icon"></span><span class="an_txt">블로그</span>
-</a>
-</li>
-
-
-<li class="an_item">
-<a class="an_a mn_kin" data-clk="svc.kin" href="http://kin.naver.com/">
-<span class="an_icon"></span><span class="an_txt">지식인</span>
-</a>
-</li>
-
-
-<li class="an_item">
-<a class="an_a mn_shopping" data-clk="svc.shopping" href="http://shopping2.naver.com/">
-<span class="an_icon"></span><span class="an_txt">쇼핑</span>
-</a>
-</li>
-
-
-<li class="an_item">
-<a class="an_a mn_checkout" data-clk="svc.pay" href="http://pay.naver.com/">
-<span class="an_icon"></span><span class="an_txt">네이버페이</span>
-</a>
-</li>
-
+--- 중략 ---
 
 <li class="an_item">
 <a class="an_a mn_tvcast" data-clk="svc.tvcast" href="http://tv.naver.com/">
@@ -154,27 +120,9 @@ print(lis)
 <a class="an_a mn_mail" data-clk="svc.mail" href="http://mail.naver.com/">
 <span class="an_icon"></span><span class="an_txt">메일</span>
 </a>
-</li>, <li class="an_item">
-<a class="an_a mn_cafe" data-clk="svc.cafe" href="http://section.cafe.naver.com/">
-<span class="an_icon"></span><span class="an_txt">카페</span>
-</a>
-</li>, <li class="an_item">
-<a class="an_a mn_blog" data-clk="svc.blog" href="http://section.blog.naver.com/">
-<span class="an_icon"></span><span class="an_txt">블로그</span>
-</a>
-</li>, <li class="an_item">
-<a class="an_a mn_kin" data-clk="svc.kin" href="http://kin.naver.com/">
-<span class="an_icon"></span><span class="an_txt">지식인</span>
-</a>
-</li>, <li class="an_item">
-<a class="an_a mn_shopping" data-clk="svc.shopping" href="http://shopping2.naver.com/">
-<span class="an_icon"></span><span class="an_txt">쇼핑</span>
-</a>
-</li>, <li class="an_item">
-<a class="an_a mn_checkout" data-clk="svc.pay" href="http://pay.naver.com/">
-<span class="an_icon"></span><span class="an_txt">네이버페이</span>
-</a>
-</li>, <li class="an_item">
+</li>,
+--- 중략 --- 
+<li class="an_item">
 <a class="an_a mn_tvcast" data-clk="svc.tvcast" href="http://tv.naver.com/">
 <span class="an_icon"></span><span class="an_txt">네이버TV</span>
 </a>
@@ -201,6 +149,7 @@ for li in lis:
     print(a_tag)
 ```
 
+결과
 ```text
 <a class="an_a mn_mail" data-clk="svc.mail" href="http://mail.naver.com/">
 <span class="an_icon"></span><span class="an_txt">메일</span>
