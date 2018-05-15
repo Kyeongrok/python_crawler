@@ -201,6 +201,19 @@ for li in lis:
     print(a_tag)
 ```
 
+```text
+<a class="an_a mn_mail" data-clk="svc.mail" href="http://mail.naver.com/">
+<span class="an_icon"></span><span class="an_txt">메일</span>
+</a>
+<a class="an_a mn_cafe" data-clk="svc.cafe" href="http://section.cafe.naver.com/">
+<span class="an_icon"></span><span class="an_txt">카페</span>
+</a>
+··· 중략 ···
+<a class="an_a mn_tvcast" data-clk="svc.tvcast" href="http://tv.naver.com/">
+<span class="an_icon"></span><span class="an_txt">네이버TV</span>
+</a>
+
+```
 
 ### a안에 span중 class가 an_txt인 것 뽑아내기
 한단계 더 들어가지만 같은 level에 태그가 2개 이상인 경우 class를 사용합니다.
@@ -222,6 +235,18 @@ for li in lis:
     a_tag = li.find("a")
     span = a_tag.find("span", {"class":"an_txt"})
     print(span)
+```
+
+결과
+```text
+<span class="an_txt">메일</span>
+<span class="an_txt">카페</span>
+<span class="an_txt">블로그</span>
+<span class="an_txt">지식인</span>
+<span class="an_txt">쇼핑</span>
+<span class="an_txt">네이버페이</span>
+<span class="an_txt">네이버TV</span>
+
 ```
 
 ### 글자만 뽑아내기
