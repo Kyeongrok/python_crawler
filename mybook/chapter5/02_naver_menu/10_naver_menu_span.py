@@ -12,5 +12,6 @@ lis = ul.findAll("li")
 
 for li in lis:
     a_tag = li.find("a")
-    print(a_tag)
+    span = a_tag.find("span", {"class":"an_txt"})
+    print(span)
     
