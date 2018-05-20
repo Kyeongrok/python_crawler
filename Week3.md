@@ -18,18 +18,36 @@ BeautifulSoup(뷰티풀솝)은 데이터를 추출하는데 필요한 기능이 
 ```python
 import bs4
 html_str = "<html><div></div></html>"
-bsObj = bs4.BeautifulSoup(html_str, "html.parser")
+bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-print(type(bsObj))
-print(bsObj)
-print(bsObj.find("div"))
+print(type(bs_obj))
+print(bs_obj)
+print(bs_obj.find("div"))
 ```
+
+결과
+```text
+<class 'bs4.BeautifulSoup'>
+<html><div></div></html>
+<div></div>
+```
+
+```html
+<html><div></div></html>
+```
+위 코드는 html형식의 문서를 가장 단순하게 만들어본 코드 입니다.
+
+html.parser는 인터넷에 있는 대부분의 문서가 html로 되어 있기 때문에 "html.parser"를 사용합니다.
+
 
 위 코드를 그냥 실행 하면 모듈이 없다는 에러가 납니다.
 그래서 bs4를 설치 해야 합니다.
 
+.find("div")이 부분이 가장 중요 합니다. html문서에서 가장 먼저 등장하는 div를 뽑으라는 명령입니다. 위 예제에서는 한개만 있기 때문에 바로 나오네요.
+
 ### 크롤링이란?
 인터넷 주소로 서버에 데이터를 요청해서 받아오는 것(콘솔에 출력하는 것)
+서버에 리퀘스트(request)를 보내서 서버가 준 response를 받는 것
 * 라이브러리 : urlopen
 
 ### 파싱이란?
@@ -39,6 +57,8 @@ print(bsObj.find("div"))
 
 ### 태그란?
 html문서를 표현 할 때 쓰는 화면 구성을 하는 표시들.
+
+문서에 있는 특정 부분에 꼬리표를 붙여준다는 뜻으로 tag라고 쓴다.
 ```html
 <html>, <div>, <ul>, <li>, <a>, <span> 등이 있다.
 ```
@@ -86,6 +106,15 @@ bsObj = bs4.BeautifulSoup(html_str, "html.parser")
 ul = bsObj.find("ul")
 print(ul)
 
+```
+
+결과
+```text
+<ul>
+<li>hello</li>
+<li>bye</li>
+<li>welcome</li>
+</ul>
 ```
 
 ### 데이터 받아서 파싱하기

@@ -1,7 +1,7 @@
 import bs4
 html_str = "<html><div></div></html>"
-bsObj = bs4.BeautifulSoup(html_str, "html.parser")
+bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-print(type(bsObj))
-print(bsObj)
-print(bsObj.find("div"))
+print(type(bs_obj))
+print(bs_obj)
+print(bs_obj.find("div"))
