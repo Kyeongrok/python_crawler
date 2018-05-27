@@ -8,6 +8,6 @@ text = urlopen(url)
 
 json_obj = json.load(text)
 
-for item in json_obj[0:10]:
-    print(item)
+for item in json_obj:
+    print(item['date'] + "," + item['settlement'])
 
