@@ -4,8 +4,3 @@ json_obj = json.loads(json_str)
 
 print(json_obj)
 print(json_obj[0])
-
-'''
-뭐가 다를까요?
-[]가 없습니다.
-'''
