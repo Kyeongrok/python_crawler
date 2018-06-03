@@ -5,6 +5,10 @@ with open("./hello.txt", mode="w+") as f:
 ```
 파일에 데이터 저장하기
 
-```python
 
+```python
+f1 = open("./hello.txt", mode='r')
+lines = f1.readlines()
+
+print(lines)
 ```
