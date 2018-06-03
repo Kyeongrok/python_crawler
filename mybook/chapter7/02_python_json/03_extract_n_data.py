@@ -11,6 +11,6 @@ list기준으로는 item이 두개. 왜냐하면 중괄호가 두개이기 때�
 
 '''
 print(json_obj[2])
-IndexError: list index out of range
+IndexError: list index out of rangeㅆ
 list는 0번 index부터 시작합니다.
 '''

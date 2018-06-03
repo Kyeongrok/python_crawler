@@ -4,3 +4,4 @@ json_obj = json.loads(json_str)
 
 print(json_obj[0])
 print(json_obj[0]['name'])
+print(json_obj[0]['age'])
