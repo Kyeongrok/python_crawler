@@ -9,9 +9,7 @@ bs_obj = BeautifulSoup(result.content, "html.parser")
 
 lf_items = bs_obj.findAll("div", {"class":"lf-item"})
 
-
 hrefs = [div.find("a")['href'] for div in lf_items ]
-
 
 
 for href in hrefs:
