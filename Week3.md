@@ -34,8 +34,10 @@ print(bs_obj.find("div").text)
 hello
 ```
 
+BeautifulSoup() 함수에 받은 데이터를 넣으면 텍스트 형식으로 된 데이터를 구조화 시켜서 우리가 데이터를 비교적 쉽게 뽑아 낼 수 있도록 오브젝트를 리턴합니다.
+
 ```html
-<html><div></div></html>
+<html><div>hello</div></html>
 ```
 위 코드는 html형식의 문서를 가장 단순하게 만들어본 코드 입니다.
 
