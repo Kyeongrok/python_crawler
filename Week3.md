@@ -19,19 +19,19 @@ BeautifulSoup(뷰티풀솝)은 데이터를 추출하는데 필요한 기능이 
 ###  BeautifulSoup 사용법
 ```python
 import bs4
-html_str = "<html><div></div></html>"
+html_str = '<html><div>hello</div></html>'
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-print(type(bs_obj))
 print(bs_obj)
 print(bs_obj.find("div"))
+print(bs_obj.find("div").text)
 ```
 
 결과
 ```text
-<class 'bs4.BeautifulSoup'>
-<html><div></div></html>
-<div></div>
+<html><div>hello</div></html>
+<div>hello</div>
+hello
 ```
 
 ```html

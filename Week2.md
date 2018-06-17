@@ -32,6 +32,9 @@ html = urlopen(url)
 print(html.read())
 ```
 
+http request(리퀘스트)를 하는 라이브러리가 urllib입니다.
+urlopen() 함수는 파라메터로 url을 받고 서버에서 사용자에게 보내준 데이터를 return합니다.
+
 
 ### CSS
 * Cascading Style Sheet

@@ -1,6 +1,6 @@
-import urllib.request
+from urllib.request import urlopen
 
 url = "https://www.naver.com"
-html = urllib.request.urlopen(url)
+html = urlopen(url)
 
 print(html.read())
