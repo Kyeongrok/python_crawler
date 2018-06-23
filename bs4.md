@@ -123,6 +123,21 @@ print(ul)
 
 ### 데이터 받아서 파싱하기
 네이버에서 맨 오른쪽 위에 있는 '네이버를 시작페이지로'이 글자를 파싱 하는 코드입니다.
+
+페이지 불러오기
+```python
+import urllib.request
+import bs4
+
+url = "https://www.naver.com/"
+html = urllib.request.urlopen(url)
+
+bs_obj = bs4.BeautifulSoup(html, "html.parser")
+
+print(bs_obj)
+```
+
+데이터 뽑아내기
 ```python
 import urllib.request
 import bs4

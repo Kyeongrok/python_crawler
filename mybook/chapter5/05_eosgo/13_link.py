@@ -16,3 +16,5 @@ cover_buttons = bs_obj.find("div", {"class":"cover-buttons"})
 button_label = bs_obj.find("span", {"class":"button-label"})
 location = button_label.text
 
+lis = cover_buttons.findAll("li")
+print(lis)

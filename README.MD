@@ -6,7 +6,8 @@
 
 
 ## 데이터 수집 기초
-[2주차 내용](./Week2.md)
+[2주차 크롤링이란](./Week2.md )
+[2주차 BeautifulSoup](./bs4.md )
 
 * 크롤링이란, 파싱이란?
 * 라이브러리란? 라이브러리 설치하기
@@ -26,17 +27,6 @@ Python이 설치된 경로는 파인더 -> 응용프로그램 -> Python3.x입니
     - BeautifulSoup으로 파싱한다.
     - 개발자 도구를 켜서 원하는 데이터가 있는 위치를 찾는다.
 
-## 네이버 첫 페이지 받아오기
-```python
-import urllib.request
-
-url = "https://www.naver.com/"
-html = urllib.request.urlopen(url)
-
-print(html.read())
-```
-
-[BeautifulSoup](./Week3.md)
 
 [네이버 메뉴 크롤링](./03_naver_crawl.md)
 
