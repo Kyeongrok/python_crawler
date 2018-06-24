@@ -20,11 +20,11 @@ def get_proudct_info(box):
     price = spans_price[1].text
 
     atag = box.find("a")
-    print(atag)
+    link = atag['href']
 
-    return {"name":name, "price":price}
+    return {"name":name, "price":price, "link":link}
 
-for box in boxes:
-    product_info = get_proudct_info(box)
-    print(product_info)
+product_info_list = [get_proudct_info(box) for box in boxes]
+
+print(product_info_list)
 
