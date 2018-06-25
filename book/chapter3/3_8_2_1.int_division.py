@@ -1,0 +1,7 @@
+print(30/4)
+print(4/30)
+print(5/10)
+print(10/5)
+print(1/1)
+print(type(1))
+print(type(1/1))
