@@ -11,7 +11,7 @@ html_str = """
     </body>
 </html>
 """
-bsObj = bs4.BeautifulSoup(html_str, "html.parser")
+bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-ul = bsObj.find("ul")
+ul = bs_obj.find("ul")
 print(ul)
