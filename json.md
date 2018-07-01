@@ -1,7 +1,50 @@
-## JSON이란?
+## JSON
+* javascript object notation(JSON)
+* 자바스크립트 오브젝트 표현법
+* tree구조
+* key, value
+
 제이선 JSON(Javasript Object Notation)이란 자바스크립트에서 데이터 객체를 표현하는 방법을 말합니다. 제이선, 제이썬, 제이슨 등으로 읽습니다.
 
 자바스크립트에서 사용하는 데이터를 표현 할 때 사용하는 방법이었는데 이게 생각보다 간결하고 길이도 다른 것에 비해서(xml 등) 짧습니다. 다른 표현 방법에 비해 비교적 사람이 알아보기 쉬워서 자바스크립트 말고 다른 곳에서도 많이 쓰게 되었습니다. 물론 비교적 쉽다는 것이지 처음부터 쉽다는 것은 아닙니다.
+
+```
+    {}한개, []여러개
+    atag, atags
+    {list:[
+            {name:"kyeongrok", age:"32"},
+            {name:"bomi", age:"25"},
+            {name:"cl", age:"27"}
+        ]
+    }
+    
+    {list:[]}
+    
+    [
+        {"href":"www.naver.com", name:"naver"},
+        {"href":"www.google.com", name:"google"},
+        {},
+        {}
+    ]
+```
+
+## json 편하게 보는 site
+* json tree
+* http://jsonviewer.stack.hu/
+
+## 실습
+1. http request하기
+2. url 알아내서 a tag출력하기
+3. 아래 data json으로 바꾸기
+```
+    이름	가격	위치
+    cozy 모임공간	2500	강남역 3번출구
+    스터디 플래닛	3000	역삼역과 강남역 근처
+    에이지 스토리	2000	서울대입구역
+    스타벅스	5000	많음
+```
+
+## JSON예제
 
 ```json
 {"list":[
@@ -29,7 +72,6 @@ json으로 한명의 사람을 가장 간단하게 표현해 보았습니다.
 ```json
 {"name":"kyeongrok", "age":"32"}
 ```
-
 
 {}안에는 name(이름)과 age(나이) 두가지가 들어갔습니다. 구분을 할 때는 ,컴마로 구분을 합니다.
 

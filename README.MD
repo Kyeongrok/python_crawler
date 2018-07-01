@@ -6,7 +6,7 @@
 
 
 ## 데이터 수집 기초
-[2주차 크롤링이란](./Week2.md )
+[2주차 크롤링이란](what_is_crawling.md )
 
 [2주차 BeautifulSoup](./bs4.md )
 
@@ -22,6 +22,12 @@ Python이 설치된 경로에 들어가 Install Certificates.command 한다
 Python이 설치된 경로는 파인더 -> 응용프로그램 -> Python3.x입니다.
 
 ## 크롤러 만들기
+[3주차 네이버 메뉴 크롤링](./03_naver_crawl.md)
+
+[JSON](./json.md)
+
+[FILe](./file.md)
+
 1. 페이지를 불러온다.
     - 어떻게 불러올 것인가?
     - urllib.request를 써서 불러온다.
@@ -31,9 +37,5 @@ Python이 설치된 경로는 파인더 -> 응용프로그램 -> Python3.x입니
     - 개발자 도구를 켜서 원하는 데이터가 있는 위치를 찾는다.
 
 
-[네이버 메뉴 크롤링](./03_naver_crawl.md)
 
-[JSON](./json.md)
-
-[FILe](./file.md)
 
