@@ -6,7 +6,7 @@ html_str = """
         <ul class="greet">
             <li>hello</li>
             <li>bye</li>
-            <li>welcome</li>
+ ㅆ           <li>welcome</li>
         </ul>
         <ul class="reply">
             <li>ok</li>
