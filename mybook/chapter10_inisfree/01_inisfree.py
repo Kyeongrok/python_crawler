@@ -12,7 +12,11 @@ list_cons = bs_obj.findAll("div", {"class":"listCon"})
 def get_product_info(item):
     product_name = item.find("p", {"class":"pdtName"}).find("em").text
     sold_out = item.find("span", {"class":"colorRed"}) or ""
+    if sold_out != "":
+        sold_out = sold_out.text
+        sold_out.replace(" ", "")
     price = item.find("p", {"class":"price"}).text
+    price = price.replace('\n', '').replace('\t', '').replace('\r', '').replace("일시품절", "")
     return {"soldout":sold_out, "product_name":product_name, "price":price}
 
 for item in list_cons:
