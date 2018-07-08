@@ -18,6 +18,10 @@ html_str = """
 """
 
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
+# bye 뽑아내기
+aaaa = bs_obj.findAll("li")
+print(aaaa)
 
-ul = bs_obj.find("ul", {"class":"reply"})
-print(ul)
+for li in aaaa:
+    print(li)
+

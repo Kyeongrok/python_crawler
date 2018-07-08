@@ -18,5 +18,5 @@ html_str = """
 """
 
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
-hello = bs_obj.find("li")
-print(hello.text)
+
+# ok no sure뽑아내기
