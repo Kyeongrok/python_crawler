@@ -19,7 +19,8 @@ html_str = """
 
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-lis = bs_obj.findAll("li")
+ul_reply = bs_obj.find("ul", {"class":"reply"})
+lis = ul_reply.findAll("li")
 
-for li in lis:
+for li in lis[1:2]:
     print(li.text)
