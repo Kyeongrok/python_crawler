@@ -5,8 +5,8 @@ jjson = json.loads(file.read())
 
 # print(jjson)
 
-print(jjson['BTCKRW']['coinone']['last'])
-print(jjson['LTCKRW']['coinone']['last'])
-print(jjson['BCHKRW']['coinone']['last'])
-print(jjson['EOSKRW']['coinone']['last'])
-print(jjson['ETHKRW']['coinone']['last'])
+print(jjson['BTCKRW']['chapter13_coinone']['last'])
+print(jjson['LTCKRW']['chapter13_coinone']['last'])
+print(jjson['BCHKRW']['chapter13_coinone']['last'])
+print(jjson['EOSKRW']['chapter13_coinone']['last'])
+print(jjson['ETHKRW']['chapter13_coinone']['last'])

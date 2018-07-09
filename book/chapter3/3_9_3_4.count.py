@@ -1,3 +1,0 @@
-introduction = "Project Gutenberg never charges a fee, for anything. Everything from Project Gutenberg is gratis, libre, and completely without cost to readers. Free to read and free to redistribute. Project Gutenberg eBooks require no special apps to read, just the regular Web browsers or eBook readers that are included with computers and mobile devices. There have been reports of sites that charge fees for custom apps, or for the same eBooks that are freely available from Project Gutenberg. Some of the apps might have worthwhile features, but none are required to enjoy Project Gutenberg eBooks."
-
-print(introduction.count("Project"))

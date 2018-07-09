@@ -9,7 +9,7 @@ from urllib.request import urlopen, Request
 ACCESS_TOKEN = ''
 SECRET_KEY = ''
 UPPERCASE_SECRET_KEY = SECRET_KEY.upper()
-HOST = 'https://api.coinone.co.kr/'
+HOST = 'https://api.chapter13_coinone.co.kr/'
 
 
 def get_base_payload():

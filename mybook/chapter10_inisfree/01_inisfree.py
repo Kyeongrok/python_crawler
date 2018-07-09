@@ -25,6 +25,7 @@ def get_page_product(url):
 
 urls = [
     "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UA&catCd02=&tp=1&pageNo=1&sortStr=",
+    # UA = 스킨케어 10, UM = 5
     "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UA&catCd02=&tp=1&pageNo=2&sortStr=",
     "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UA&catCd02=&tp=1&pageNo=3&sortStr=",
     "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UA&catCd02=&tp=1&pageNo=4&sortStr=",
@@ -62,9 +63,20 @@ urls = [
     "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UN&catCd02=&tp=1&pageNo=10&sortStr=",
     "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UN&catCd02=&tp=1&pageNo=11&sortStr=",
 
-    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd01=&tp=1&pageNo=1&sortStr=",
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd02=&tp=1&pageNo=1&sortStr=",  # UD 클렌징 5
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd02=&tp=1&pageNo=2&sortStr=",  # UD 클렌징 5
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd02=&tp=1&pageNo=3&sortStr=",  # UD 클렌징 5
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd02=&tp=1&pageNo=4&sortStr=",  # UD 클렌징 5
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd02=&tp=1&pageNo=5&sortStr=",  # UD 클렌징 5
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UD&catCd02=&tp=1&pageNo=6&sortStr=",
 
-    ]
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UF&catCd02=&tp=1&pageNo=1&sortStr=",
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UF&catCd02=&tp=1&pageNo=2&sortStr=",
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UF&catCd02=&tp=1&pageNo=3&sortStr=",
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UF&catCd02=&tp=1&pageNo=4&sortStr=",
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UF&catCd02=&tp=1&pageNo=5&sortStr=",
+    "http://www.innisfree.com/kr/ko/ProductListSub.do?catCd01=UF&catCd02=&tp=1&pageNo=6&sortStr=",
+]
 
 for url in urls:
     items = get_page_product(url)

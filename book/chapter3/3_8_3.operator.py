@@ -1,8 +1,0 @@
-print(5 + 4)
-print(5.0 - 3.0)
-print(10.5 * 4)
-print(200 / 10)
-print(200 % 10)
-print(20 / 7)
-print(20 % 7)
-print(20 // 7)
