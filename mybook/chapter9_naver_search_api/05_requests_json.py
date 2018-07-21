@@ -11,6 +11,11 @@ print(json['total'])
 print(json['start'])
 print(json['items'])
 
+for item in json['items']:
+    print(item['title'])
+
+print("-----------")
+#
 titles = [ item['title'] for item in json['items']]
 for title in titles:
     print(title)
