@@ -1,0 +1,10 @@
+import requests
+import bs4
+from urllib.parse import urlparse
+
+url = "https://openapi.naver.com/v1/search/blog?query=보험"
+result = requests.get(urlparse(url).geturl(),
+                      headers={"X-Naver-Client-Id":"H1DC13DICQ8zIK84XwWn",
+                               "X-Naver-Client-Secret":"8sUQqFukKQ"})
+
+print(result.json())

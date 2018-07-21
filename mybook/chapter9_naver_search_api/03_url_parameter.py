@@ -6,7 +6,7 @@ import urllib.request
 client_id = "H1DC13DICQ8zIK84XwWn"
 client_secret = "8sUQqFukKQ"
 encText = urllib.parse.quote("여름")
-url = "https://openapi.naver.com/v1/search/blog?query=" + encText + "&display=100" # json 결과
+url = "https://openapi.naver.com/v1/search/blog?query=" + encText + "&display=10" + "&start=1" # json 결과
 # url = "https://openapi.naver.com/v1/search/blog.xml?query=" + encText # xml 결과
 request = urllib.request.Request(url)
 request.add_header("X-Naver-Client-Id",client_id)
