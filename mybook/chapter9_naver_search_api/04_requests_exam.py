@@ -1,5 +1,4 @@
 import requests
-import bs4
 from urllib.parse import urlparse
 
 url = "https://openapi.naver.com/v1/search/blog?query=보험"
