@@ -1,4 +1,2 @@
-user = {}
-user['name'] = "kyeongrok"
-
+user = {"name":"kyeongrok"}
 print(user)
