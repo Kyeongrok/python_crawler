@@ -1,4 +1,4 @@
-password = 1234
+password = 1235
 
 if password == 1234:
     print("문을 열어줍니다.")
