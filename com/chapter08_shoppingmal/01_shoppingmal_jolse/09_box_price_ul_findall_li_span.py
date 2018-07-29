@@ -8,7 +8,7 @@ bs_obj = BeautifulSoup(result.content, "html.parser")
 
 boxes = bs_obj.findAll("div", {"class":"box"}) # 전체다 []에 넣어줌
 
-for box in boxes[0:1]:
+for box in boxes:
     p_name = box.find("p", {"class":"name"})
     a_tag = p_name.find("a")
     product_name = a_tag['title']
