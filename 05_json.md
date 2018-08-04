@@ -8,25 +8,55 @@
 
 자바스크립트에서 사용하는 데이터를 표현 할 때 사용하는 방법이었는데 이게 생각보다 간결하고 길이도 다른 것에 비해서(xml 등) 짧습니다. 다른 표현 방법에 비해 비교적 사람이 알아보기 쉬워서 자바스크립트 말고 다른 곳에서도 많이 쓰게 되었습니다. 물론 비교적 쉽다는 것이지 처음부터 쉽다는 것은 아닙니다.
 
+```python
+json_obj = {"name":"kyeongrok"}
+
+print(json_obj)
 ```
-    {}한개, []여러개
-    atag, atags
-    {list:[
-            {name:"kyeongrok", age:"32"},
-            {name:"bomi", age:"25"},
-            {name:"cl", age:"27"}
-        ]
-    }
-    
-    {list:[]}
-    
-    [
-        {"href":"www.naver.com", name:"naver"},
-        {"href":"www.google.com", name:"google"},
-        {},
-        {}
-    ]
+
+```python
+json_obj = {"name":"kyeongrok", "age":"32"}
+
+print(json_obj)
 ```
+
+```python
+json_obj = {"name":"kyeongrok",
+            "age":"32",
+            "where":"역삼동",
+            "phone_number":"010-3588-6265"
+            }
+
+print(json_obj)
+```
+
+```python
+json_obj = {"name":"kyeongrok",
+            "age":"32",
+            "where":"역삼동",
+            "phone_number":"010-3588-6265",
+            "friends":[{"name":"doyeon", "age":"32"}]
+            }
+
+print(json_obj['friends'])
+```
+
+```python
+json_obj = {"name":"kyeongrok",
+            "age":"32",
+            "where":"역삼동",
+            "phone_number":"010-3588-6265",
+            "friends":[
+                {"name":"doyeon", "age":"32"},
+                {"name":"kuri", "age":"24"}
+            ]
+            }
+
+friends = json_obj['friends']
+for friend in friends:
+    print(friend['name'])
+```
+
 
 ## json 편하게 보는 site
 * json tree
