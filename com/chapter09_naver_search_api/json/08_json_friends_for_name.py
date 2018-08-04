@@ -3,11 +3,11 @@ json_obj = {"name":"kyeongrok",
             "where":"역삼동",
             "phone_number":"010-3588-6265",
             "friends":[
-                {"name":"doyeon", "age":"32"},
-                {"name":"kuri", "age":"24"}
+                {"name":"sian", "age":"32"},
+                {"name":"kyuri", "age":"24"}
             ]
             }
 
 friends = json_obj['friends']
 for friend in friends:
-    print(friend['name'])
+    print(friend['age'])
