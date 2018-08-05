@@ -7,9 +7,10 @@
 ## 데이터 수집 기초
 [2주차 크롤링이란](01_what_is_crawling.md )
 
-[2주차 BeautifulSoup 사용법](02_bs4.md )
+[2주차 네이버 첫 페이지 불러오기](02_naver_urlopen.md)
 
-[2주차 네이버 첫 페이지 불러오기](03_naver_first_page.md)
+[2주차 BeautifulSoup 사용법](03_bs4.md )
+
 
 ## Certificate 에러 날 때
 Python이 설치된 경로에 들어가 Install Certificates.command 한다
