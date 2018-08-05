@@ -7,7 +7,7 @@
 ## 데이터 수집 기초
 [2주차 크롤링이란](01_what_is_crawling.md )
 
-[2주차 네이버 첫 페이지 불러오기](02_naver_urlopen.md)
+[2주차 urlopen()으로 naver불러오기](02_naver_urlopen.md)
 
 [2주차 BeautifulSoup 사용법](03_bs4.md )
 
