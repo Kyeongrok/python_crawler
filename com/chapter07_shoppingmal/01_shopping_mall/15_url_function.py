@@ -28,5 +28,7 @@ def get_page_products(url):
 
 url = "http://jolse.com/category/tonermist/43/"
 page_products = get_page_products(url)
-print(page_products)
+
+for page_products in page_products:
+    print(page_products)
 

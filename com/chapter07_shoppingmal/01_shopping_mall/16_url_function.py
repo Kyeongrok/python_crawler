@@ -27,10 +27,12 @@ def get_page_products(url):
     return product_info_list
 
 for num in range(1, 6):
+   try:
     url = "http://jolse.com/category/tonermist/43/?page=" +str(num);
     results = get_page_products(url)
     for result in results:
         print(result['name'] + "," + result['price'])
-
+   except:
+    print("jddd")
 
 
