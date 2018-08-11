@@ -1,7 +1,5 @@
 from urllib.parse import urlparse
-
 import requests
-
 
 def get_json_obj(keyword, start):
     url = "https://openapi.naver.com/v1/search/blog?query=" + keyword + \
