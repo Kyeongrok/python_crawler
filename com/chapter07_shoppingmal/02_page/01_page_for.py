@@ -1,5 +1,6 @@
 import requests
 import bs4
+import time
 
 def get_proudct_info(box):
     ptag = box.find("p", {"class": "name"})
@@ -17,7 +18,9 @@ def get_proudct_info(box):
 
 
 def get_page_products(url):
+
     result = requests.get(url)
+    time.sleep(2)
     bs_obj = bs4.BeautifulSoup(result.content, "html.parser")
     ul = bs_obj.find("ul", {"class": "prdList column5"})
 
@@ -27,14 +30,12 @@ def get_page_products(url):
     return product_info_list
 
 urls =[
-    "http://jolse.com/category/tonermist/43/?page=1",
-    "http://jolse.com/category/tonermist/43/?page=2",
-    "http://jolse.com/category/tonermist/43/?page=3",
-    "http://jolse.com/category/tonermist/43/?page=4",
-    "http://jolse.com/category/tonermist/43/?page=5"
+    "http://jolse.com/category/porecare/52/",
+    "http://jolse.com/category/peel-off/138/"
 ]
 
-for page_number in range(0, 5):
+for page_number in range(0, 2):
+    time.sleep(1)
     page_products = get_page_products(urls[page_number])
     print(len(page_products), page_products)
 
