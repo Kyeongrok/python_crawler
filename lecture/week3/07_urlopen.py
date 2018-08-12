@@ -6,3 +6,4 @@ html = urllib.request.urlopen(url)
 
 bs_obj = bs4.BeautifulSoup(html, "html.parser")
 print(bs_obj)
+
