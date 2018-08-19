@@ -6,8 +6,8 @@ to_date = "2018-04-28"
 url = "http://grains.krei.re.kr/chart/main_chart/index/kind/W/sdate/" + from_date + "/edate/" + to_date
 text = urlopen(url)
 
-json_obj = json.load(text)
+json_objs = json.load(text)
 
-for item in json_obj[0:10]:
+for item in json_objs:
     print(item)
 
