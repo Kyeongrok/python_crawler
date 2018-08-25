@@ -18,5 +18,6 @@ html_str = """
 """
 
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
-hello = bs_obj.find("li")
-print(hello.text)
+
+ul = bs_obj.find("ul", {"class":"reply"})
+print(ul)

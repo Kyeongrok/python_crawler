@@ -19,7 +19,5 @@ html_str = """
 
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-lis = bs_obj.findAll("li")
-
-for li in lis:
-    print(li.text)
+ul = bs_obj.find("ul")
+print(ul)
