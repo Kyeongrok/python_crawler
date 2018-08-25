@@ -33,6 +33,6 @@ for num in range(1, 6):
     for result in results:
         print(result['name'] + "," + result['price'])
    except:
-    print("jddd")
+    print("error")
 
 

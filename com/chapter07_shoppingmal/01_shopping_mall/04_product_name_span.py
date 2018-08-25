@@ -14,4 +14,3 @@ for box in boxes:
     ptag = box.find("p", {"class": "name"})
     span = ptag.find("span")
     print(span)
-
