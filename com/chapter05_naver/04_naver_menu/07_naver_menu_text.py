@@ -14,4 +14,3 @@ for li in lis:
     a_tag = li.find("a")
     span = a_tag.find("span", {"class":"an_txt"})
     print(span.text)
-    
