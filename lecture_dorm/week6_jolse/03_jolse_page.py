@@ -21,11 +21,16 @@ def get_product_list(url):
     boxes = bs_obj.findAll("div", {"class":"box"})
     return [get_product_info(box) for box in boxes]
 
-    # for box in boxes:
-    #     print(get_product_info(box))
+urls = [
+    "http://jolse.com/category/eyecare/47/?page=1",
+    "http://jolse.com/category/eyecare/47/?page=2",
+    "http://jolse.com/category/eyecare/47/?page=3"
+]
 
-url = "http://jolse.com/category/eyecare/47/?page=" + "1"
-page1 = get_product_list(url)
-print(page1)
-
-
+for url in urls:
+    page1_products = get_product_list(url)
+    for product in page1_products:
+        try:
+            print(product['name'] +"@"+ product['org_price'])
+        except:
+            print("")
