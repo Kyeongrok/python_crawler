@@ -1,6 +1,7 @@
 import urllib.request
 
-url = "https://t1.daumcdn.net/cfile/tistory/99F4EF335BA2F7321E"
-filename = "./hello.jpg"
+
+url = "http://jolse.com/web/product/medium/201809/c3ba634b8a379ed945a9d853d2f7a5a5.jpg"
+filename = "./study_room2.jpg"
 
 urllib.request.urlretrieve(url, filename)
