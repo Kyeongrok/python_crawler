@@ -5,4 +5,8 @@ url = "http://ko.pokemon.wikia.com/wiki/%EC%9D%B4%EC%83%81%ED%95%B4%EC%94%A8_(%E
 html = urllib.request.urlopen(url)
 
 bs_obj = bs4.BeautifulSoup(html, "html.parser")
-print(bs_obj)
+# print(bs_obj)
+headline = bs_obj.find("span", {"class":"mw-headline"})
+explore_activity = bs_obj.find("a", {"data-tracking":"explore-activity"})
+print(headline.text)
+print(explore_activity.text)
