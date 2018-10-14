@@ -10,5 +10,5 @@ login_passwd = driver.find_element_by_id("pw")
 login_id.send_keys("oceanfog")
 login_passwd.send_keys("")
 
-login_button = driver.find_element_by_class_name('btn_global')
+login_button = driver.find_element_by_class_name('w2image')
 login_button.click()
