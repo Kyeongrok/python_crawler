@@ -9,7 +9,7 @@ def getPrice():
     # <p class="no_today">___</p> # 서울시 강남구
     no_today = bs_obj.find("p", {"class":"no_today"})
     blind = no_today.find("span", {"class":"blind"})
-
+    #
     print(blind.text)
 
 getPrice("068270")
