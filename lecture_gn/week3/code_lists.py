@@ -10,3 +10,5 @@ for code in codes:
         print("=>", crawler.getPrice(code))
     except:
         print("error", code)
+
+# print(crawler.getPrice(codes[0]))
