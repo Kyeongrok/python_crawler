@@ -1,6 +1,4 @@
 import requests
-# crawl
-# save
 def crawl(url, fileLocationName):
     # url을 받아서
     # request를 하고 str
