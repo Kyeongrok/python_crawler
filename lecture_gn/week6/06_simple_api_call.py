@@ -7,8 +7,3 @@ result = requests.get(urlparse(url).geturl(),
                       "X-Naver-Client-Secret":"e2u6Dw4w0c"})
 json_obj = result.json()
 print(json_obj)
-
-
-
-
-
