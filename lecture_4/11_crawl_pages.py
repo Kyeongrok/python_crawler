@@ -1,4 +1,4 @@
-import gn_libs2.crawler as crawler
+import gn_lib3.crawler as crawler
 codes = open("./codes.txt").readlines()
 infos = open("./infos.txt", "w+")
 
