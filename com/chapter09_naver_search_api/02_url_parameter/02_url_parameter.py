@@ -10,4 +10,7 @@ result = requests.get(urlparse(url).geturl(),
 json_obj = result.json()
 print(json_obj['display'])
 print(json_obj['start'])
-print(len(json_obj['items']))
+print(json_obj['items'])
+
+for item in json_obj['items']:
+    print(item)

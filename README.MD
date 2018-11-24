@@ -16,9 +16,7 @@
 
 ## 크롤러 만들기
 [네이버 북마크로 텍스트 가져오기](naver_extract_bookmark_text.md)
-
 [네이버 메뉴 크롤링](04_naver_crawl.md)
-
 [JSON이란?](05_json.md)
 
 ## 시각화 하기

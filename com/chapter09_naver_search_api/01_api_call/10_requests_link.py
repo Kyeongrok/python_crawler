@@ -1,7 +1,7 @@
 import requests
 from urllib.parse import urlparse
 
-keyword = "강남역"
+keyword = "강남역 운동"
 url = "https://openapi.naver.com/v1/search/blog?query=" + keyword
 result = requests.get(urlparse(url).geturl(),
           headers={"X-Naver-Client-Id":"H1DC13DICQ8zIK84XwWn",
