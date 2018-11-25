@@ -5,5 +5,5 @@
 import pandas as pd
 
 dataframe = pd.read_json("./data.json")
-print(dataframe)
+print(dataframe['bloggername'])
 

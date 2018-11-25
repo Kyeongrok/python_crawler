@@ -1,13 +1,12 @@
 import requests
 from urllib.parse import quote
 
-def get1000result(keyword):
+def get1000Result(keyword):
     list = []
     for num in range(0, 10):
-        page = call(keyword, num * 100 + 1)
-        list = list + page['items']
-
+        list = list + call("강남역 맛집", num * 100 + 1)['items']
     return list
+
 
 def call(keyword, start):
     encText = quote(keyword)
