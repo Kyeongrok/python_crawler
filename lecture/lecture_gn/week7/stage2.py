@@ -1,9 +1,11 @@
-import gn_lib3.naver_api_caller as caller
+from gn_lib3.naver_api_caller import get1000result
+file = open("./result.json", "w+", encoding="utf-8")
 
-file = open("./result.csv", "w+")
-result = caller.call("강남역 공연", 1)
-print(result)
-for item in result['items']:
-    print(item)
-     # file.write(item['title'] + "@" +
-     #            item['bloggername'] + "\n")
+list = []
+keywords = ["강남역 맛집", "강남역 공연", "강남역 python"]
+for keyword in keywords:
+    list = list + get1000result(keyword)
+
+import json
+file = open("./data.json", "w+")
+file.write(json.dumps(list))
