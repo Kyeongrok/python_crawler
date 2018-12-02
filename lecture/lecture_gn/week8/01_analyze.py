@@ -4,4 +4,6 @@ import pandas as pd
 df = pd.read_json("./search_result.json")
 print(df.count())
 
-df.to_csv("./hello.csv", index=False)
+
+# pandas는 data를 dataframe으로 만들어 줍니다.
+# dataframe안에 데이터를 넣으면 표처럼 쓸 수 있다.
