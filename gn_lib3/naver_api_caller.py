@@ -4,9 +4,8 @@ from urllib.parse import quote
 def get1000Result(keyword):
     list = []
     for num in range(0, 10):
-        list = list + call("강남역 맛집", num * 100 + 1)['items']
+        list = list + call(keyword, num * 100 + 1)['items']
     return list
-
 
 def call(keyword, start):
     encText = quote(keyword)
