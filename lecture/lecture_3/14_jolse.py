@@ -11,6 +11,6 @@ aaa = box.find("a").find("img")
 productName = aaa['title']
 
 ppp = box.find("p", {"class":"name"})
-# saver.save("./hello.html", productName)
+# saver.save("./1.html", productName)
 print(productName)
 
