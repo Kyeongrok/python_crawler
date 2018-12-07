@@ -14,5 +14,9 @@ def getLinks(start):
     for li in lis:
         link = "http://www.netd.ac.za/" + li.find("a")["href"]
         links.append(link)
-
     return links
+
+def sub(pageString):
+    bs_obj = BeautifulSoup(pageString, "html.parser")
+
+    return {"title":"tttt"}
