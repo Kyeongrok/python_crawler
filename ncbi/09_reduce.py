@@ -7,7 +7,9 @@ list = []
 
 for fileName in fileList:
     file = open(fileName)
-    list.append(json.loads(file.read()))
+    jsonObj = json.loads(file.read())
+    jsonObj['id'] = fileName.replace(".json", "").replace("/Users/kyeongrok/Desktop/json_results/","")
+    list.append(jsonObj)
     file.close()
 
 print(len(list))
