@@ -19,9 +19,10 @@ def parse(num):
     file2.close()
 
 
-for pageNum in df[0][8781:]:
+for pageNum in df[0][:2]:
     # time.sleep(0.001)
+    print(pageNum)
     threading.Thread(target=parse, args=(int(pageNum), )).start()
 
-file2 = open("./result.json", "w+")
-file2.write(json.dumps(list, ensure_ascii=False))
+# file2 = open("./result.json", "w+")
+# file2.write(json.dumps(list, ensure_ascii=False))

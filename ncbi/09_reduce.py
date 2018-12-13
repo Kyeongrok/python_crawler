@@ -11,4 +11,4 @@ for fileName in fileList:
     file.close()
 
 print(len(list))
-open("./result.json", "w+").write(json.dumps(list))
+open("./result2.json", "w+").write(json.dumps(list))

@@ -10,18 +10,26 @@ def getSubPageContent(pageString):
     except Exception:
         journal = cit.text
         # print("error")
-
-
     rprt_all = bs_obj.find("div", {"class":"rprt_all"})
     title = rprt_all.find("h1").text
 
     authors = []
     try:
+        rprt_all = bs_obj.find("div", {"class":"rprt_all"})
+
+        auths = rprt_all.find("div", {"class":"auths"})
+        atags = auths.findAll("a")
+        auths = [atag.text for atag in atags]
+    except Exception:
+        print("error auths")
+
+    institutions = []
+    try:
         afflist = bs_obj.find("div", {"class":"afflist"})
         dds = afflist.findAll("dd")
-        authors = [dd.text for dd in dds]
+        institutions = [dd.text for dd in dds]
     except Exception:
-        authors = []
+        institutions = []
         # print("error authors")
 
     abstract = ""
@@ -40,4 +48,5 @@ def getSubPageContent(pageString):
         keywords = []
         # print("keywords error")
 
-    return {"journal": journal, "title":title, "authors":authors, "abstract":abstract, "keywords":keywords}
+    return {"journal": journal, "title":title, "institutions":institutions, "abstract":abstract, "keywords":keywords,
+            "authors":authors}
