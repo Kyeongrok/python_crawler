@@ -5,5 +5,9 @@ print(df.count())
 
 print(df['authors'])
 
-for author in df['authors']:
-    print(author)
+count = 0
+for author in df['keywords']:
+    if(len(author) ==0):
+        count = count + 1
+
+print(count)
