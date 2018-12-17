@@ -19,7 +19,7 @@ def getSubPageContent(pageString):
 
         auths = rprt_all.find("div", {"class":"auths"})
         atags = auths.findAll("a")
-        auths = [atag.text for atag in atags]
+        authors = [atag.text for atag in atags]
     except Exception:
         print("error auths")
 
