@@ -1,9 +1,13 @@
 import pandas as pd
 import re
-
 location = "/Users/kyeongrok/Desktop/"
+df = pd.read_json(location+"result2.json")
+
+pattern = re.compile("[0-9]{4}")
+df['year'] = df.apply( lambda row: pattern.findall(row['journal'])[0], axis=1)
+
+
 urlPrefix = "https://www.ncbi.nlm.nih.gov/pubmed/"
-df = pd.read_json(location+"result3.json")
 
 regex = re.compile(r".\.*")
 
@@ -30,5 +34,4 @@ def getNations(instutions):
 
 df['nation'] = df.apply(lambda row: getNations(row['institutions']), axis=1)
 
-
-df.to_json(location + "result4.json")
+df.to_json(location + "result3.json")
