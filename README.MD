@@ -25,6 +25,9 @@
 ## File 다루기
 [File다루기](documents/file.md)
 
+## 단계별 크롤러 만들기(30)
+[단계별 크롤러 만들기](documents/crawler_stop_by_step.md)
+
 
 ## Certificate 에러 날 때
 Python이 설치된 경로에 들어가 Install Certificates.command 한다
