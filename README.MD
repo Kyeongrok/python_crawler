@@ -26,7 +26,7 @@
 [File다루기](documents/file.md)
 
 ## 단계별 크롤러 만들기(30)
-[단계별 크롤러 만들기](documents/crawler_stop_by_step.md)
+[단계별 크롤러 만들기](documents/crawler_step_by_step.md)
 
 
 ## Certificate 에러 날 때
