@@ -1,4 +1,5 @@
 # 단계별 크롤러 만들기
+* 네이버 금융에서 종목별로 종목이름, 가격 수집
 1. 프로젝트 만들기
 2. libs package만들기
 3. libs/naverFinanceCrawler.py
@@ -29,7 +30,3 @@
 28. 하드 코딩 되어있는 부분 parameter를 활용하게 바꾸기
 29. try except로 에러 처리하기
 30. 완료
-
-
- 
-
