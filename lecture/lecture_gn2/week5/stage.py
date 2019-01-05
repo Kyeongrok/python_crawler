@@ -1,5 +1,6 @@
 # import 크롤러 url -> string
 # import 파서 string -> list[{},{}]
+import json
 from libs.coupang.coupangCrawler import getString
 from libs.coupang.productsParser2 import getProducts
 
@@ -17,3 +18,6 @@ def getCategoryProducts(categoryId, lastPageNum):
 
 categoryProducts = getCategoryProducts("399742", 17)
 print(len(categoryProducts))
+
+file = open("./coupangResults.json", "w+")
+file.write(json.dumps(categoryProducts))
