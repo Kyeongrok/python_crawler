@@ -6,6 +6,7 @@ from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome("../chrome/mac/chromedriver")
 url = "https://www.ncbi.nlm.nih.gov/pubmed/?term=(%22Acute+Myeloid+Leukemia%22)+OR+%22AML%22"
+print(url)
 driver.get(url)
 driver.find_element_by_xpath("//*[@id=\"result_action_bar\"]/ul/li[3]").click()
 
