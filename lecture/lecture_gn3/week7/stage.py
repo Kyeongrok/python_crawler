@@ -4,3 +4,6 @@ from libs.naver_shopping.parser import parse
 pageString = crawl("숨셔바요")
 products = parse(pageString)
 print(len(products))
+
+for product in products:
+    print(product)
