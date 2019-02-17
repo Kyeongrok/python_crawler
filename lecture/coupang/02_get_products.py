@@ -1,4 +1,4 @@
-from libs.stringGetter import getPageString
+from libs.crawler import crawl
 from bs4 import BeautifulSoup
 
 def getProducts(string):
@@ -12,7 +12,7 @@ def getProducts(string):
 
 
 url = "https://www.coupang.com/np/categories/186764?page=1"
-pageString = getPageString(url)
+pageString = crawl(url)
 print(getProducts(pageString))
 
 

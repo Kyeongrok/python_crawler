@@ -1,6 +1,5 @@
-from libs import ncbi_crawler as crawler
+from libs.ncbi import ncbi_crawler as crawler
 import threading
-import time
 import pandas as pd
 import json
 

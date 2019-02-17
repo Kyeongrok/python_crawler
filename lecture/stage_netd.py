@@ -1,4 +1,4 @@
-from libs.netd_crawler import getLinks
+from libs.netd.netd_crawler import getLinks
 
 links = []
 for num in range(0, 2):
