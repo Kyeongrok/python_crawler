@@ -1,4 +1,4 @@
-import gn_lib3.jolse_parser as parser
+import libs.jolse.jolse_parser as parser
 
 file = open("./jolse_02.html")
 result = parser.parse(file.read())

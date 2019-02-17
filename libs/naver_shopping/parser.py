@@ -20,3 +20,4 @@ def parse(pageString):
         except:
             print("----error-----")
     return products
+

@@ -1,4 +1,4 @@
-import gn_lib3.jolse_parser as parser
+import libs.jolse.jolse_parser as parser
 import gn_lib3.save_to_file as saver
 
 file = open("./jolse_01.html")

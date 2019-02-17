@@ -1,4 +1,4 @@
-from gn_lib3.naver_api_caller import get1000result
+from libs.naver_api.naver_api_caller import get1000result
 file = open("./result.json", "w+", encoding="utf-8")
 
 list = []

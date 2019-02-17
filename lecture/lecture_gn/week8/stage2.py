@@ -1,4 +1,4 @@
-from gn_lib3.naver_api_caller2 import get1000Result
+from libs.naver_api.naver_api_caller2 import get1000Result
 import json
 # 1000개씩 두번 나오는 list를 하나의 list로 합치기
 # 합친 list를 json으로 저장하기

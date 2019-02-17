@@ -1,4 +1,4 @@
-from gn_lib3.naver_api_caller import get1000Result
+from libs.naver_api.naver_api_caller import get1000Result
 import json
 
 list = []

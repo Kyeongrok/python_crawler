@@ -1,4 +1,4 @@
-import gn_lib3.jolse_parser as parser
+import libs.jolse.jolse_parser as parser
 
 def getProdList(fileName):
     file = open(fileName, encoding="utf-8")
