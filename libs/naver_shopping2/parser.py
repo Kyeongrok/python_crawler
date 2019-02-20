@@ -1,8 +1,14 @@
 from bs4 import BeautifulSoup
 
 def getProductInfo(li):
-    print(li)
-    return {}
+    # print(li)
+    img = li.find("img")
+    alt = img['alt']
+    priceReload = li.find("span", {"class":"_price_reload"})
+    aTit = li.find("a", {"class":"tit"})
+    href = aTit['href']
+
+    return {"name":alt, "price":priceReload.text.replace(",", ""), "link":href}
 
 def parse(pageString):
     bsObj = BeautifulSoup(pageString, "html.parser")
