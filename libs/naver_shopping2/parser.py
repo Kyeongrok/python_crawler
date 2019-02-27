@@ -17,8 +17,11 @@ def parse(pageString):
 
     products = []
     for li in lis:
-        product = getProductInfo(li)
-        products.append(product)
+        try:
+            product = getProductInfo(li)
+            products.append(product)
+        except:
+            print("--error--")
 
     return products
 
