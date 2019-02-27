@@ -1,5 +1,4 @@
 import requests
-import pandas as pd
 from libs.naver_shopping2.parser import parse
 import json
 
@@ -9,19 +8,15 @@ def crawl(pageNo):
     print(data, url)
     return data.content
 
-keywordTotalProducts = []
-for pageNo in range(1, 2):
+totalProducts = []
+for pageNo in range(1, 10+1):
     pageString = crawl(pageNo)
     products = parse(pageString)
-    keywordTotalProducts = keywordTotalProducts + products
+    totalProducts += products
 
-for product in keywordTotalProducts:
-    print(product)
+print(totalProducts)
+print(len(totalProducts))
 
-print(keywordTotalProducts)
-print(len(keywordTotalProducts))
 
-df = pd.DataFrame(keywordTotalProducts)
-print(df.count())
-writer = pd.ExcelWriter("./tumb.xlsx")
-df.to_excel(writer, "sheet1")
+file = open("./tumbler.json", "w+")
+file.write(json.dumps(totalProducts))
