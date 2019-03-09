@@ -11,6 +11,6 @@ def getSearchResults(keyword):
     return results
 
 results = getSearchResults("강남역 저녁")
-
+print(results)
 file = open("./results.json", "w+")
 file.write(json.dumps(results))
