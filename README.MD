@@ -13,6 +13,13 @@
 
 [BeautifulSoup 사용법](documents/03_bs4.md )
 
+## 브라우저 문제 있을 때
+```python
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) 26.109 Safari/537.36"
+    }
+    data = requests.get(url, headers=headers)
+```
 
 ## 크롤러 만들기
 [네이버 북마크로 텍스트 가져오기](documents/naver_extract_bookmark_text.md)

@@ -10,5 +10,8 @@ def getCategory(categoryNo):
     return result
 
 result = getCategory("195297") # 1020
+for item in result:
+    print(item)
 print(len(result))
+
 
