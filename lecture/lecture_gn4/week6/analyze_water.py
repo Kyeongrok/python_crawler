@@ -15,8 +15,8 @@ brands = ["아이시스", "몽베스트", "스파클", "풀무원", "에비앙",
 for brand in brands:
     dfFiltered = df[df['name'].str.contains(brand)]
     dfSorted = df.sort_values(['price'])
-    dfTop5 = dfFiltered.head(5)
-    dfTail5 = dfFiltered.tail(5)
+    dfTop5 = dfSorted.head(5)
+    dfTail5 = dfSorted.tail(5)
     list = [
         {"df":dfSorted, "sheetName":"sorted"},
         {"df":dfTop5, "sheetName":"top5"},
