@@ -1,4 +1,4 @@
-import dorm_libs.crawler as crawler
+import libs.dorm_libs.crawler as crawler
 
 list = [
 {"code":"060310","name":"3S"},

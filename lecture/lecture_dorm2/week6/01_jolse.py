@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import dorm_libs.parser_shoppingmall as parser
+import libs.dorm_libs.parser_shoppingmall as parser
 
 bs_obj = BeautifulSoup(open("./jolse.html",
                 encoding="utf-8").read(), "html.parser")
