@@ -1,6 +1,6 @@
 from libs.naver_shopping.crawler import crawl
 from libs.naver_shopping.parser import parse
-from libs.jsonSaver import save
+from libs.jsonFileSaver import save
 
 results = []
 keywords = ["숨셔바요", "탈취제", "애완동물 냄세"]

@@ -2,7 +2,7 @@ from libs.crawler import crawl
 from bs4 import BeautifulSoup
 
 import re
-pattern = 'CI=.{3}'
+pattern = 'CI=[0-9]{3,4}'
 pattern = re.compile(pattern)
 
 def parse(pageString):
