@@ -9,7 +9,7 @@ print(type(iTotalCount))
 endPage = iTotalCount // 36
 print("endPage:", endPage)
 
-results = getKeywordResults("마카롱", 50)
+results = getKeywordResults("마카롱", 10)
 print(len(results))
 
 import json

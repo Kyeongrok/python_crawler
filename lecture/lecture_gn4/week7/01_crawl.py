@@ -6,7 +6,8 @@ from bs4 import BeautifulSoup
 import json
 
 def crawl(keyword, pageNo):
-    url = "https://www.coupang.com/np/search?component=&q={}&channel=user&page={}".format(keyword, pageNo)
+    #component = 194176
+    url = "https://www.coupang.com/np/search?component=194176&q={}&channel=user&page={}".format(keyword, pageNo)
     data = requests.get(url)
     print(data, url)
     return data.content
