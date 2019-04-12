@@ -8,6 +8,7 @@ bookInfos = json.loads(fileString)
 print(len(bookInfos))
 def parse(pageString):
     bsObj = BeautifulSoup(pageString, "html.parser")
+
     lis = bsObj.findAll("li")
     tkbs = bsObj.findAll("td", {"class":"tkb"})
     bookName = tkbs[1].find("b").text.split(" ")[0]
@@ -20,20 +21,26 @@ def parse(pageString):
     return statements
 
 # for index in range(1, bookInfo['totalPage'] + 1 ):
-bible = {}
-for index in range(len(bookInfos)):
-    bookInfo = bookInfos[index]
-    print(bookInfo)
-    ci = index + bookInfo['firstCi']
+def getBible(versionCode):
+    bible = {}
+    for index in range(len(bookInfos)):
+        bookInfo = bookInfos[index]
+        print(bookInfo)
+        ci = index + bookInfo['firstCi']
 
-    url = "http://www.holybible.or.kr/BIBLE_hkjv/cgi/bibleftxt.php?VR=0&CI={}&CV=99&FR=H".format(ci)
-    statements = parse(crawl(url))
-    print(len(statements))
-    bible[index+1] = statements
+        vr = "GAE" # kjv:0 b_gae:9
+        if(bookInfo['totalPage'] != 1):
+            url = "http://www.holybible.or.kr/{}/cgi/bibleftxt.php?VR={}&CI={}&CV=99".format(versionCode, vr, ci)
+        else:
+            url = bookInfo['url']
+        pageString = crawl(url)
+        statements = parse(pageString)
+        print(len(statements))
+        bible[index+1] = statements
+    return bible
 
-print(bible)
-
-# save(bible, "bible.json")
+bible = getBible("B_GAE")
+save(bible, "B_GAE_bible.json")
 
 # 훔. 수집을. 또 해보쟈
 
