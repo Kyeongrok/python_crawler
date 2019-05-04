@@ -8,7 +8,8 @@ import json
 def crawl(keyword, pageNo):
     #component = 194176
     url = "https://www.coupang.com/np/search?component=194176&q={}&channel=user&page={}".format(keyword, pageNo)
-    data = requests.get(url)
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    data = requests.get(url, headers=headers)
     print(data, url)
     return data.content
 
