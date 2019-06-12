@@ -1,15 +1,17 @@
 from libs.crawler import crawl
 from bs4 import BeautifulSoup
 import libs.bibleFinder as finder
+from libs.patternMatcher import findMatchedTexts
+from libs.bible.bibleAddressGetter import getAddr
 
-url = "http://www.365qt.com/TodaysQT.asp?QTID=7617"
+url = "http://www.365qt.com/TodaysQT.asp?QTID=7618"
 pageString = crawl(url)
 
 def addLine(guideText):
     result = ""
     for i in range(len(guideText)):
         result += guideText[i]
-        if(i % 73 == 0):
+        if(i % 65 == 0):
             result += "\n"
     return result
 
@@ -20,7 +22,9 @@ def parse(pageString):
 
     qtDayText2 = bsObj.find("div", {"id":"qtDay"})
     try:
-        result['qtDayText2'] = qtDayText2.text
+        result['date'] = findMatchedTexts(qtDayText2.text, "201[\s\S]+")
+        res = findMatchedTexts(qtDayText2.text, "\(.+\)")
+        result['addr'] = getAddr(res[0])
     except Exception as e:
         print(e)
 
@@ -41,10 +45,13 @@ def parse(pageString):
     return result
 
 result = parse(pageString)
-print(result['qtDayText2'])
-print(result['ps4'])
-print(result['bx2'])
 
-res = finder.findBetween("민",12,1,8)
+addr = result['addr']
+print(addr)
+res = finder.findBetween(addr['book'],addr['chapter'],
+                         addr['verseFrom'],addr['verseTo'])
 for re in res:
     print(re['index'], re['text'])
+print(result['date'])
+print(result['ps4'])
+print(result['bx2'])
