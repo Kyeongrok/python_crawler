@@ -1,3 +1,3 @@
 from libs.daily_sam.dailySamCrawler import runDailySam
 
-runDailySam(7619)
+runDailySam(7622)
