@@ -10,13 +10,14 @@ print(df.count())
 
 print(df.head(5)[['price', 'link']])
 
-dfSorted = df.sort_values(['price'])
+dfSorted = df.sort_values(['price'], ascending=False)
 
 print(dfSorted.head(5)[['price', 'link']])
 
 print(dfSorted['price'])
 print(dfSorted.head(5)[['price', 'link']])
 print(dfSorted.tail(5)[['price', 'link']])
+
 
 
 
