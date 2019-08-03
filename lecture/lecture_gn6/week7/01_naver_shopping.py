@@ -10,9 +10,11 @@ def crawl(url):
 def getProductInfo(li):
     img = li.find("img")
     priceReload = li.find("span", {"class":"_price_reload"})
+    price = priceReload.text
+    price = price.replace(",", "").replace(",", "")
     info = li.find("div", {"class":"info"})
     link = info.find("a")['href']
-    return {"name":img['alt'], "price":priceReload.text, "link":link}
+    return {"name":img['alt'], "price":price, "link":link}
 
 def parse(pageString):
     bsObj = BeautifulSoup(pageString, "html.parser")
