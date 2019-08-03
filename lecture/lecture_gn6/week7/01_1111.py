@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 
 def crawl(url):
     data = requests.get(url)
@@ -37,6 +36,3 @@ for pageNo in range(1, 10 + 1):
     result = result + getProducts(pageNo)
 
 print(len(result))
-
-file = open("./coffee.json", "w+")
-file.write(json.dumps(result))
