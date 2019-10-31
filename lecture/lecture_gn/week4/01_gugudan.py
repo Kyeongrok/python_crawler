@@ -12,7 +12,6 @@ def gugudan(dan):
 # 2단 ~ 9단 동시에
 for dan in range(2, 9+1):
     print("-------------------")
-    print(dan)
     gugudan(dan)
 
 

@@ -3,15 +3,10 @@
 # plus라는 이름의 함수를 만들고
 # 매개변수 두개를 추가 해보세요
 def plus(val1, val2):
-    # val1과 val2를 더한 값을 출력 해보세요
     return val1 + val2
-
-plus(10, 20)
 
 def minus(val1, val2):
     return val1 - val2
-
-minus(10, 20)
 
 def multiple(val1, val2):
     return val1 * val2
@@ -19,8 +14,10 @@ def multiple(val1, val2):
 def divide(val1, val2):
     return val1 / val2
 
-multiple(10, 20)
-divide(10, 20)
+print(plus(10, 20))
+print(minus(10, 20))
+print(multiple(10, 20))
+print(divide(10, 20))
 
 # 30 * 40 - 70 / 60 + 100
 
