@@ -23,11 +23,16 @@ def parse(pageString):
         ss = extDat[0].split("\r\n        ")
         ss2 = "{} {}".format(ss[0].replace("\n", ". "), ss[1])
         result['date'] = ss2
-        res = findMatchedTexts(qtDayText2.text, "\(.+\)")
-        result['addr'] = getAddr(res[0])
     except Exception as e:
-        print(e)
+        print("error during date", e)
 
+    try:
+        res = findMatchedTexts(qtDayText2.text, "\(.+\)")
+        addr = getAddr(res[0])
+        result['addr'] = addr
+    except Exception as e:
+        result['addr'] = ""
+        print("error during addr", e)
     box2Content = bsObj.find("div", {"class":"box2Content"})
     result['box2Content'] = box2Content.text
 
@@ -50,6 +55,8 @@ def runDailySam(qtid):
     result = parse(pageString)
 
     addr = result['addr']
+    if addr == "":
+        return "addr is blank"
     print(result['date'], addr)
     statements = findBetween(addr['book'],addr['chapter'],
                       addr['verseFrom'],addr['verseTo'])

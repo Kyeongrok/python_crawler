@@ -41,7 +41,7 @@ options.add_argument("lang=ko_KR")
 #     chrome_options=options,
 # )
 
-driver = webdriver.Chrome("../chrome/mac/chromedriver")
+driver = webdriver.Chrome("../../chrome/mac/chromedriver")
 time.sleep(5 + random.random() * 0.3)
 
 ## 암묵적으로 웹 자원 로드를 위해 3초까지 기다려 준다.

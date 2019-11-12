@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-driver = webdriver.Chrome("/Users/ydseo/chromedriver")
+driver = webdriver.Chrome("../../chrome/chrome")
 driver.implicitly_wait(3)
 
 driver.get("https://nid.naver.com/nidlogin.login")
