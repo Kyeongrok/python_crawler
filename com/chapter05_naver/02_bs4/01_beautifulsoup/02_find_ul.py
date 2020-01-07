@@ -13,5 +13,4 @@ html_str = """
 """
 bs_obj = bs4.BeautifulSoup(html_str, "html.parser")
 
-ul = bs_obj.find("ul")
-print(ul)
+lis = bs_obj.find("ul")

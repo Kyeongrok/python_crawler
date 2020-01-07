@@ -12,3 +12,4 @@ lis = ul.findAll("li")
 
 for li in lis:
     print(li)
+
