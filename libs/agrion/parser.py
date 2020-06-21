@@ -28,11 +28,24 @@ def get_row(tr):
         print('---------')
     # print(tds[1], tds[2], tds[3])
 
-    id_a = tds[0].find('h4').find('a')['href']
-    api_id = findMatchedTexts(id_a, "javascript:view\('[0-9]+")[0]
-    api_id = api_id.replace("javascript:view('", "")
+    api_id = ''
+    try:
+        id_a = tds[0].find('h4').find('a')['href']
+        api_id = findMatchedTexts(id_a, "javascript:view\('[0-9]+")[0]
+        api_id = api_id.replace("javascript:view('", "")
+    except Exception as e:
+        print('----api id exception -----')
 
-    return {'api_id':api_id, 'title':first, 'subtitle':second, 'count':tds[3].text}
+    service_types = []
+    try:
+        service_types_spans = tds[5].find('div', {'class':'datatype'}).find_all('span')
+        service_types = [span.text for span in service_types_spans ]
+
+    except Exception as e:
+        print('----- serivce types exception -------')
+
+    return {'api_id':api_id, 'title':first, 'subtitle':second,
+            'count':tds[3].text, 'service_types':service_types}
 
 
 def parse(string):
