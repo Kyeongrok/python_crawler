@@ -7,5 +7,5 @@ for keyword in keywords:
     list = list + get1000result(keyword)
 
 import json
-file = open("./data.json", "w+")
+file = open("./data_file.json", "w+")
 file.write(json.dumps(list))
