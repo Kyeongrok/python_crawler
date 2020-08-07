@@ -20,8 +20,8 @@ import requests, re
 
 url = 'https://finance.naver.com/item/main.nhn?code=005930'
 # string = crawl(url)
-# open('samsung.html', 'w+').write(requests.get(url).text)
-string = open('samsung.html', encoding='utf-8').read()
+# open('005930.html', 'w+').write(requests.get(url).text)
+string = open('target_site_file/005930.html', encoding='utf-8').read()
 
 
 replace_space = lambda x: re.sub("(\n|\t|\\xa0|,)", "", x)
@@ -32,24 +32,42 @@ def parse(string):
     aside = bsobj.find('div', {'id':'aside'})
     tab_con1 = aside.find('div', {'id':'tab_con1'})
 
-    # 시총 들어있는 table
-    div_first_tbody_trs = tab_con1.find('div', {'class':'first'})
 
-    per_table = tab_con1.find('table', {'class':'per_table'})
-    trs = per_table.find_all('tr')
     pbr = 0
     bps = 0
     price_today = 0
     sales = 0
+    net_income = 0
+    market_cap = 0
+
+    operating_profit = 0
 
     # 최근 연간 매출
     cop_analysis = bsobj.find('div', {'class':'section cop_analysis'})
     tr_t_line = cop_analysis.find('thead').find_all('tr')[1].find_all('th')[2].text
     last_year = replace_space(tr_t_line)
-    cell_strong = cop_analysis.find('td', {'class':'t_line cell_strong'}).text
-    sales = float(re.sub("(\n|\t|\\xa0|,)", "", cell_strong))
 
-    # 현재가
+    tbody_trs = cop_analysis.find('tbody').find_all('tr')
+    tbody_first_tr_tds = tbody_trs[0].find_all('td')
+    tbody_second_tr_tds = tbody_trs[1].find_all('td')
+    tbody_third_tr_tds = tbody_trs[2].find_all('td')
+    sales = float(replace_space(tbody_first_tr_tds[2].text))
+
+    # operating profit 영업이익
+    operating_profit = float(replace_space(tbody_second_tr_tds[2].text))
+
+    # 당기순이익
+    net_income = float(replace_space(tbody_third_tr_tds[2].text))
+
+
+    # 시가총액
+    div_first_tbody_trs = tab_con1.find('div', {'class':'first'}).find_all('tr')
+    market_cap = re.sub('(\t|\n)','',div_first_tbody_trs[0].find('td').text)
+    print(market_cap)
+
+
+
+    # 현재가sdf
     try:
         price_today = bsobj.find('p', {'class':'no_today'}).find('span', {'class':'blind'}).text.replace(',','')
         price_today = float(price_today)
@@ -57,13 +75,17 @@ def parse(string):
         print(e)
 
     try:
-        ems = trs[2].find_all('em')
+        per_table = tab_con1.find('table', {'class': 'per_table'})
+        per_table_trs = per_table.find_all('tr')
+        ems = per_table_trs[2].find_all('em')
         pbr = float(ems[0].text)
         bps = float(ems[1].text.replace(',', ''))
     except Exception as e:
         print(e)
 
+    # 전년도 매출
     return {'price_today':price_today, 'bps':bps, 'pbr':pbr, 'bps_minus_today_price':bps - price_today,
-            'sales{}'.format(last_year):sales*pow(10, 8)}
+            'sales{}'.format(last_year):sales*pow(10, 8), 'operating_profit{}'.format(last_year):
+    operating_profit * pow(10, 8), 'net_income':net_income * pow(10, 8)}
 
 print(parse(string))
