@@ -25,7 +25,6 @@ string = open('samsung.html', encoding='utf-8').read()
 
 def parse(string):
     bsobj = BeautifulSoup(string, 'html.parser')
-
     aside = bsobj.find('div', {'id':'aside'})
     tab_con1 = aside.find('div', {'id':'tab_con1'})
 
@@ -36,6 +35,14 @@ def parse(string):
     trs = per_table.find_all('tr')
     pbr = 0
     bps = 0
+    price_today = 0
+
+    # 현재가
+    try:
+        price_today = bsobj.find('p', {'class':'no_today'}).find('span', {'class':'blind'}).text.replace(',','')
+        price_today = float(price_today)
+    except Exception as e:
+        print(e)
 
     try:
         ems = trs[2].find_all('em')
@@ -44,6 +51,6 @@ def parse(string):
     except Exception as e:
         print(e)
 
-    print(bps, pbr)
+    return {'price_today':price_today, 'bps':bps, 'pbr':pbr, 'bps_minus_today_price':bps - price_today}
 
-parse(string)
+print(parse(string))
