@@ -2,9 +2,8 @@ from libs.naver_shopping2.crawler import crawl
 from libs.naver_shopping2.parser import parse
 import json
 
-pageString = crawl('')
-products = parse(pageString)
-print(products)
+page_string = crawl('액박+패드')
+products = parse(page_string)
 print(len(products))
 
 file = open("./products.json", "w+")

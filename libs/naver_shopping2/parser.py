@@ -1,27 +1,26 @@
 from bs4 import BeautifulSoup
 
 def getProductInfo(li):
-    # print(li)
+    print(li)
     img = li.find("img")
     alt = img['alt']
-    priceReload = li.find("span", {"class":"_price_reload"})
-    aTit = li.find("a", {"class":"tit"})
-    href = aTit['href']
+    price = li.find("strong", {"class":"basicList_price__2r23_"}).find('span')
+    a_tit = li.find("a", {"class":"basicList_link__1MaTN"})
+    href = a_tit['href']
 
-    return {"name":alt, "price":priceReload.text.replace(",", ""), "link":href}
+    return {"name":alt, "price":price.text.replace(",", ""), "link":href}
 
 def parse(pageString):
-    bsObj = BeautifulSoup(pageString, "html.parser")
-    ul = bsObj.find("ul", {"class":"goods_list"})
-    lis = ul.findAll("li", {"class":"_itemSection"})
+    bs_obj = BeautifulSoup(pageString, "html.parser")
+    ul = bs_obj.find("ul", {"class":"list_basis"})
+    lis = ul.findAll("li", {"class":"basicList_item__2XT81"})
 
     products = []
     for li in lis:
         try:
-            product = getProductInfo(li)
-            products.append(product)
-        except:
-            print("--error--")
+            products.append(getProductInfo(li))
+        except Exception as e:
+            print("--error--", e)
 
     return products
 
